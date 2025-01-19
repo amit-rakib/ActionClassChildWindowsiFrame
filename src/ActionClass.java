@@ -13,23 +13,19 @@ public class ActionClass {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+	
+		WebDriver driver = new ChromeDriver();
 
-		 ChromeOptions options = new ChromeOptions();
-	     options.addArguments("--disable-blink-features=AutomationControlled");
-
-		
-		WebDriver driver = new ChromeDriver(options);
-
-		driver.get("https://www.amazon.com/");
+		driver.get("https://testsigma.com/blog/action-class-in-selenium/");
 
 		Actions action = new Actions(driver);
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("nav-link-accountList")));
+		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+       // wait.until(ExpectedConditions.presenceOfElementLocated(By.id("nav-link-accountList")));
 
 		
 		// Every Action needs to be build() and perform() to execute
-		WebElement place = driver.findElement(By.id("nav-link-accountList"));
+		WebElement place = driver.findElement(By.xpath("//p[normalize-space()='Products']"));
 
 		action.moveToElement(place).build().perform();
 
