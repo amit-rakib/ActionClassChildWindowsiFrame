@@ -20,10 +20,8 @@ public class ActionClass {
 
 		Actions action = new Actions(driver);
 
-		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-       // wait.until(ExpectedConditions.presenceOfElementLocated(By.id("nav-link-accountList")));
-
-		
+         
+		// Move to specific element
 		// Every Action needs to be build() and perform() to execute
 		WebElement place = driver.findElement(By.xpath("//p[normalize-space()='Products']"));
 

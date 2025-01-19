@@ -23,6 +23,10 @@ public class ActionClassTwo {
 		// to select using double click 
 		action.moveToElement(searchBox).doubleClick().build().perform();
 		
+		// Right click option
+		action.moveToElement(searchBox).contextClick().build().perform();
+		
+		
 		
 	}
 
