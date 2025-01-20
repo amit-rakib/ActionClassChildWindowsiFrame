@@ -37,7 +37,6 @@ public class ParentChildWindowHandles {
 		System.out.println(email);
 
 		// Parent window area
-
 		driver.switchTo().window(parentWindow);
 
 		driver.findElement(By.id("username")).sendKeys(email);
